@@ -1,0 +1,56 @@
+
+{% extends "layout.html" %}
+
+{%block content%}
+
+<h4>[check files]</h4><hr>
+
+<h4>Images to Search</h4>
+<p class="minifont">(the image collection to scan)</p>
+<p class="minifont">
+    {%for item in sdata%}
+
+
+        {{item}}  <br>
+
+    {% endfor %}
+
+
+...<br>
+{{sitemtotal}} images in total
+<br><br>
+<b>existing face encodings</b><br>
+hog: {{sfehogcount}}  <br>
+cnn: {{sfecnncount}}  <br>
+</p>
+
+
+<h4>Target Images</h4>
+<p class="minifont">(the images with the faces to find)</p>
+<p class="minifont">
+    {%for item in tdata%}
+
+        {{item}}  <br>
+
+    {% endfor %}
+...<br>
+{{titemtotal}} images in total
+<br><br>
+<b>existing face encodings</b><br>
+hog: {{tfehogcount}}  <br>
+cnn: {{tfecnncount}}  <br>
+</p>
+<br>
+<hr>
+<h4>Encoding File Check</h4>
+<form method="post" action="/checkfilehash">
+
+    <p class="minifont"> Checks existing face encoding files against images to ensure they match.<br> 
+       <b>This can take a while to run depending on number of imaged + encoding files to scan.</b> </p>
+    <input type="submit" value="check" name="v"/><br><br>
+
+ </form>
+
+
+
+{%endblock content%}

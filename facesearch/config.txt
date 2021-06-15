@@ -1,0 +1,4 @@
+[
+{"smallfacescan": "off"}
+]
+

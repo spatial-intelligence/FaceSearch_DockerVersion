@@ -1,0 +1,45 @@
+
+{% extends "layout.html" %}
+
+{%block content%}
+<h4>[run search]</h4><hr>
+
+<h5>Check Target face(s) against Sources </h5>
+<br>
+
+<b>Choose which encodings to use in the scan:</b><br><br>
+
+<form method="post" action="/process3">
+
+   {%if shog>0 and thog>0%}
+   FAST:<br><input type="submit" value="HOG" name="v"/><br><br>
+   {% endif %}
+
+   {%if scnn>0 and tcnn>0%}
+   DETAIL:<br> <input type="submit" value="CNN" name="v" />
+   {% endif %}
+
+</form>
+<br><br><br>
+<p class='minifont'>
+    <b>Data Details:</b><br>
+    source hog: {{shog}}<br>
+    target hog: {{thog}}<br><br>
+    source cnn: {{scnn}}<br>
+    target cnn: {{tcnn}}<br>
+</p>
+
+{%if shog==0 or thog==0%}
+<p class='minifont'>
+To use HOG mode first generate the HOG encodings for target and sources
+</p><br>
+{% endif %}
+
+{%if scnn==0 or tcnn==0%}
+<p class='minifont'>
+To use CNN mode first generate the CNN encodings for target and sources <br>
+</p>
+{% endif %}
+
+
+{%endblock content%}

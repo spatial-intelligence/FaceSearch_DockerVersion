@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+
+{%block content%}
+
+<img src = '/static/logo.png' alt='osr4rights logo'  ></a>
+<br><br><br>
+<p class='minifont'>
+This tools has been developed as part of the OSR4Rights project:
+<a href='https://osr4rights.org/' >osr4rights.org</a>  <br><br>
+[alpha release: July 2020]
+</p>
+<br>
+<h4>Setup</h4>
+<p class="minifont">
+The image files to be scanned need to be placed on the host PC in the 'mapped' folder.<br>
+This 'mapped folder' will need to have been created as part of the Docker setup procedure<br><br>
+The structure within that 'mapped' folder should be as follows:<br>
+/search   -- images to be scanned need to be placed in subfolder called 'search' (lowercase)<br>
+/target    -- images which contain target faces to find <br>
+
+Note: Images need to be of type: .jpg  or  .png  <br>
+<br>
+When complete click [check files] to ensure the application can find the images you wish to scan. <br>
+There are two encoding methods, the HOG method is faster while the CNN method is better with a wider range of face angles (eg not looking directly at the camera) but slower.
+
+<br>
+</p>
+<br>
+
+{%endblock content%}

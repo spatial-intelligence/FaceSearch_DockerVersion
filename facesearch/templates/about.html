@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1894.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #0000e9; -webkit-text-stroke: #0000e9}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p5 {margin: 0.0px 0.0px 6.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    li.li1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+    span.s2 {text-decoration: underline ; font-kerning: none}
+    span.s3 {font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
+    span.s4 {-webkit-text-stroke: 0px #000000}
+    ul.ul1 {list-style-type: disc}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">{% extends "layout.html" %} {%block content%}<span class="Apple-converted-space"> </span></span></p>
+<h5 style="margin: 0.0px 0.0px 16.6px 0.0px; font: 10.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>About:</b></span></h5>
+<p class="p1"><span class="s1">This tools has been developed as part of the OSR4Rights project.</span></p>
+<p class="p3"><span class="s2"><a href="https://osr4rights.org/">osr4rights.org</a></span><span class="s3"><span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h5 style="margin: 0.0px 0.0px 16.6px 0.0px; font: 10.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Technologies:</b></span></h5>
+<p class="p1"><span class="s1">This face recognition tool makes use of the Dlib library for face recognition via https://pypi.org/project/face-recognition/<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">Alpha version: July 2020<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">Released under MIT License<span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<h5 style="margin: 0.0px 0.0px 16.6px 0.0px; font: 10.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>CNN Configuration:</b></span></h5>
+<p class="p1"><span class="s1">CNN Small Face Detection ON (slower):</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">CNN Small Face Detection OFF (faster):</span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<h5 style="margin: 0.0px 0.0px 16.6px 0.0px; font: 10.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Delete Encoding Files:</b></span></h5>
+<p class="p1"><span class="s1">Bulk Delete Search/Target Encodings function</span></p>
+<p class="p1"><span class="s1">Enter lowercase <b>delete hog</b> or <b>delete cnn</b> to remove the matching files from the search folder then push ok button<span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h5 style="margin: 0.0px 0.0px 16.6px 0.0px; font: 10.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Details:</b></span></h5>
+<p class="p1"><span class="s1">This tool is designed to assist in searching for a person's face in an image collection.</span></p>
+<p class="p1"><span class="s1">The software scans each image for faces then generates a corresponding face encoding file.<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">This can take a while - therefore there are 2 search facilities offered:<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">    Option 1) HOG mode: +fast -accuracy</span></p>
+<p class="p1"><span class="s1">    Option 2) CNN mode: +accuracy -slow</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">Once a face encoding has been computed it is saved to disk with the extension .fe_hog or .fe_cnn.</span></p>
+<p class="p1"><span class="s1">These encodings will be used in the future so that repeat searches of the same image collection will be much faster.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h5 style="margin: 0.0px 0.0px 16.6px 0.0px; font: 10.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Notes:</b></span></h5>
+<ul class="ul1">
+  <li class="li1"><span class="s4"></span><span class="s1">The tool should be considered as an assistant and not replacement for human checkers.<span class="Apple-converted-space"> </span></span></li>
+  <li class="li1"><span class="s4"><b></b></span><span class="s1"><b>The tool will return false positives and false negatives - the results are ranked with best match first.</b><span class="Apple-converted-space"> </span></span></li>
+  <li class="li1"><span class="s4"></span><span class="s1">Dlib is known to have issues matching children's faces and Asian faces, due to the dataset it was trained on.</span></li>
+  <li class="li1"><span class="s4"></span><span class="s1">The face likeness score is between 0.0 (same) and 1.0 and is exponential. So the likeness difference between a score 0.2 to 0.3 is <b>much</b> smaller than the difference between a 0.5 and 0.6.<span class="Apple-converted-space"> </span></span></li>
+</ul>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h5 style="margin: 0.0px 0.0px 16.6px 0.0px; font: 10.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>How to use:</b></span></h5>
+<p class="p1"><span class="s1">Put the files you wish to scan into a directory on your PC which is shared with the Docker container as 'data' Image files to be scanned must be placed in a folder structure as follows:<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">    /osr4rights/search - files to be searched to find the target face(s)</span></p>
+<p class="p1"><span class="s1">    /osr4rights/target - files which define the target face(s) to find</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">Image files must be of type .jpg or .png<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">Set the target face(s) to find. This can be several different pictures of the same person.<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">The software will then search for any matches.<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">The output report will rank from close matches to distant matches.<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s1">Please note this can take a long while depending on the speed of the PC and number of files to scan.<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<h5 style="margin: 0.0px 0.0px 16.6px 0.0px; font: 10.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Options:</b></span></h5>
+<p class="p1"><span class="s1">There is a toggle for scanning small faces. This enlarges the original image and divides into 4 sections before scanning for faces. This is done to keep the memory usage as low as possible, while giving better recognition for smaller faces in images. However the extra image processing will increase the processing time.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">Use the image details page to check how many faces were found in each image, and check a sample to see if you need to enable the smallfaces option. It can over-report the number of faces found in the image details list if small faces scanning is included, due to the double processing of each image.<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">{%endblock content%}</span></p>
+</body>
+</html>

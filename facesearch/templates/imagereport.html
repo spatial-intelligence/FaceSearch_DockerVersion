@@ -1,0 +1,32 @@
+
+{% extends "layout.html" %}
+
+{%block content%}
+
+<h3>Results</h3> 
+
+<p class='minifont'>
+Shows how many faces found in each image
+</p>
+
+
+{% for r in res %}
+------<br>
+searched: <br>
+  {{r.0}} <br>
+----------------
+  <br>
+  results:<br>
+
+
+  {% for rr in r.1 %}
+  {{rr.0}} --> {{rr.1}} <br>
+  <img src={{ url_for('custom_static', filename='') }}{{rr.0}}  width =30%  height: auto > <br>
+<br><br>
+  {% endfor %}
+
+{% endfor %}
+
+
+{%endblock content%}
+

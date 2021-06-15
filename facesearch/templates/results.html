@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{%block content%}
+
+<h4>Results</h4> 
+
+<table class='minifont'>
+
+<tr>
+    <td>
+
+Matches shown from most likely to least likely. <br>
+Key for scores: <br>
+0.00 to 0.15  good match <br>
+0.15 to 0.35  likely match<br>
+0.35 to 0.55  possible match <br>
+>0.55         some similarities
+<br></td>
+<td>
+Images shown for scores less than 0.5 difference
+<br>
+Click on the image to see full size version
+</td>
+
+</tr>
+</table>
+<br>
+
+
+{% for r in res %}
+
+<table id="resulttable">
+<tr><th><b>Search:</b> <br> 
+    <p class='minifont'>{{r.0}} </p>
+</th>
+<td align="center">
+    <a href ={{ url_for('custom_static', filename='') }}{{r.0}} >
+    <img src={{ url_for('custom_static', filename='') }}{{r.0}}  width =200px  height: auto >
+</a>
+</td>
+</tr>
+<tr><td><b>Found:</b></td></tr>
+<tr>
+{% for rr in r.1 %}
+<td>
+<p class='minifont'>
+{{rr.0}}
+<br>
+[ {{'%0.4f'| format(rr.1|float)}} ]</p><br>
+</td>
+<td align="center">
+{%if rr.1 < 0.5 %}
+<a href ={{ url_for('custom_static', filename='') }}{{rr.0}} >
+<img  src={{ url_for('custom_static', filename='') }}{{rr.0}} loading="lazy"  width:auto  height=400px > 
+</a>
+{% else %}
+<a href ={{ url_for('custom_static', filename='') }}{{rr.0}} >image link </a>
+{% endif %}
+</td>
+</tr>
+{% endfor %}
+</table>
+{% endfor %}
+
+
+
+
+
+{%endblock content%}
+
+
